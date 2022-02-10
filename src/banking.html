@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Site</title>
+
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+
+  <body class="bg-blue-100">
+    <header>
+      <h1 class="text-5xl text-center mt-16">
+        Let's make some
+        <span class="font-semibold text-indigo-700">Money!!!!</span>
+      </h1>
+    </header>
+
+    <main class="w-3/4 mx-auto">
+      <section class="mt-8">
+        <div class="grid grid-cols-3 gap-8">
+          <div class="bg-green-200 p-8 rounded-xl">
+            <h3 class="text-2xl">Deposit</h3>
+            <h3 class="text-4xl">$<span id="deposit-amount">00</span></h3>
+          </div>
+          <div class="bg-red-200 p-8 rounded-xl">
+            <h3 class="text-2xl">Withdraw</h3>
+            <h3 class="text-4xl">$00</h3>
+          </div>
+          <div class="bg-purple-200 p-8 rounded-xl">
+            <h3 class="text-2xl">Balance</h3>
+            <h3 class="text-4xl">$1200</h3>
+          </div>
+        </div>
+      </section>
+      <!-- Form -->
+      <section>
+        <div class="grid grid-cols-2 gap-8 mt-16">
+          <div class="bank-form">
+            <div class="bank-form-section">
+              <h1 class="bank-form-title">Deposit</h1>
+              <p class="bank-form-description">
+                Please enter the amount in $ you want to deposit.
+              </p>
+              <input
+                id="deposit-input"
+                type="text"
+                placeholder="Deposit"
+                class="bank-form-input"
+              />
+              <button
+                id="deposit-button"
+                class="bg-green-400 bank-form-submit-btn"
+              >
+                Deposit Now
+              </button>
+            </div>
+          </div>
+          <div class="bank-form">
+            <div class="bank-form-section">
+              <h1 class="bank-form-title">Withdraw</h1>
+              <p class="bank-form-description">
+                Please enter the amount in $ you want to withdraw.
+              </p>
+              <input
+                id="withdraw-input"
+                type="text"
+                placeholder="Withdraw"
+                class="bank-form-input"
+              />
+              <button
+                id="withdraw-button"
+                class="bg-red-400 bank-form-submit-btn"
+              >
+                Withdraw Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/banking.js"></script>
+  </body>
+</html>
