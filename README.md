@@ -6,7 +6,7 @@
 
 <p>Just add the email and password below and submit to go to the next page.</p>
 
-> Email: bank@money.com > <br/>
+> Email: bank@money.com <br/>
 > Password: secret
 
 Visit [Live Site](https://hasibmiraz.github.io/baap-er-bank/src/index.html).
