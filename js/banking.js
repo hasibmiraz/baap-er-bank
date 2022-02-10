@@ -1,42 +1,33 @@
+const callToAction = function (action) {
+  const moneyInAction = parseInt(
+    document.getElementById(`${action}-input`).value
+  );
+  const totalMoneyInAction =
+    parseInt(document.getElementById(`${action}-amount`).innerText) +
+    moneyInAction;
+
+  document.getElementById(`${action}-amount`).innerText = totalMoneyInAction;
+
+  const totalAmount = parseInt(
+    document.getElementById("total-amount").innerText
+  );
+
+  if (action === "deposit") {
+    document.getElementById("total-amount").innerText =
+      totalAmount + moneyInAction;
+  } else {
+    document.getElementById("total-amount").innerText =
+      totalAmount - moneyInAction;
+  }
+  document.getElementById(`${action}-input`).value = "";
+};
+
 // Handle deposit button
 document
   .getElementById("deposit-button")
-  .addEventListener("click", function () {
-    const depositAmount = parseInt(
-      document.getElementById("deposit-input").value
-    );
-    const totalDeposit =
-      parseInt(document.getElementById("deposit-amount").innerText) +
-      depositAmount;
-
-    document.getElementById("deposit-amount").innerText = totalDeposit;
-
-    const totalAmount = parseInt(
-      document.getElementById("total-amount").innerText
-    );
-    document.getElementById("total-amount").innerText =
-      totalAmount + totalDeposit;
-    document.getElementById("deposit-input").value = "";
-  });
+  .addEventListener("click", () => callToAction("deposit"));
 
 // Handle withdraw button
 document
   .getElementById("withdraw-button")
-  .addEventListener("click", function () {
-    const withdrawAmount = parseInt(
-      document.getElementById("withdraw-input").value
-    );
-
-    const totalWithdraw =
-      parseInt(document.getElementById("withdraw-amount").innerText) +
-      withdrawAmount;
-    document.getElementById("withdraw-amount").innerText = totalWithdraw;
-
-    const totalAmount = parseInt(
-      document.getElementById("total-amount").innerText
-    );
-    document.getElementById("total-amount").innerText =
-      totalAmount - totalWithdraw;
-
-    document.getElementById("withdraw-input").value = "";
-  });
+  .addEventListener("click", () => callToAction("withdraw"));
